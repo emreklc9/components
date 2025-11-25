@@ -33,7 +33,7 @@ export const Text: React.FC<TextProps> = ({
   const finalSize: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' = size || defaultSizes[variant];
 
   // Size styles
-  const sizeStyles = {
+  const sizeStyles: Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl', string> = {
     xs: 'text-xs',
     sm: 'text-sm',
     md: 'text-base',
@@ -44,7 +44,7 @@ export const Text: React.FC<TextProps> = ({
   };
 
   // Weight styles
-  const weightStyles = {
+  const weightStyles: Record<'light' | 'normal' | 'medium' | 'semibold' | 'bold', string> = {
     light: 'font-light',
     normal: 'font-normal',
     medium: 'font-medium',
@@ -53,7 +53,7 @@ export const Text: React.FC<TextProps> = ({
   };
 
   // Color styles
-  const colorStyles = {
+  const colorStyles: Record<'default' | 'muted' | 'primary' | 'secondary' | 'error' | 'success', string> = {
     default: 'text-gray-900',
     muted: 'text-gray-500',
     primary: 'text-blue-600',
@@ -63,7 +63,7 @@ export const Text: React.FC<TextProps> = ({
   };
 
   // Alignment styles
-  const alignStyles = {
+  const alignStyles: Record<'left' | 'center' | 'right' | 'justify', string> = {
     left: 'text-left',
     center: 'text-center',
     right: 'text-right',
