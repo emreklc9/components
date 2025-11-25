@@ -17,11 +17,15 @@ npm install git+https://github.com/emreklc9/components.git
 ## Usage
 
 ```tsx
-import { Button, Input } from '@emre/components';
+import { Button, Input, Text } from '@emre/components';
 
 function App() {
   return (
     <div>
+      <Text variant="heading" size="2xl" weight="bold">
+        Welcome
+      </Text>
+      
       <Input 
         label="Email"
         placeholder="Enter your email"
@@ -41,6 +45,31 @@ function App() {
 ```
 
 ## Components
+
+### Text
+
+A flexible text component with multiple variants, sizes, and styling options.
+
+**Props:**
+- `as`: 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' (default: 'p')
+- `variant`: 'body' | 'caption' | 'heading' | 'subheading' (default: 'body')
+- `size`: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
+- `weight`: 'light' | 'normal' | 'medium' | 'semibold' | 'bold'
+- `color`: 'default' | 'muted' | 'primary' | 'secondary' | 'error' | 'success' (default: 'default')
+- `align`: 'left' | 'center' | 'right' | 'justify'
+- `truncate`: boolean (default: false)
+- All standard HTML paragraph attributes
+
+**Example:**
+```tsx
+<Text variant="heading" size="2xl" weight="bold" color="primary">
+  Hello World
+</Text>
+
+<Text variant="body" color="muted" align="center">
+  This is a centered muted text
+</Text>
+```
 
 ### Button
 
