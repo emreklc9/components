@@ -14,10 +14,18 @@ npm install @emre/components
 npm install git+https://github.com/emreklc9/components.git
 ```
 
+**Not:** Paket yüklendiğinde otomatik olarak build alınır (`postinstall` script sayesinde).
+
 ## Usage
 
 ```tsx
+// Tek seferde import edebilirsin
 import { Button, Input, Text } from '@emre/components';
+
+// Veya ayrı ayrı
+import { Input } from '@emre/components';
+import { Button } from '@emre/components';
+import { Text } from '@emre/components';
 
 function App() {
   return (
