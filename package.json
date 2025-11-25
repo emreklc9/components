@@ -21,7 +21,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build",
-    "postinstall": "npm run build"
+    "postinstall": "npm install --no-save typescript @types/react @types/react-dom && npm run build"
   },
   "keywords": [
     "react",
